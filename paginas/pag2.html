@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa - iFood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="fotos/logo.png" class="logo">
+        </div>
+        
+        <div class="header-right">
+            <div class="user-info">
+                <img src="fotos/perfil.png" alt="Foto do Perfil" class="user-photo">
+                <span class="user-name">João Silva</span>
+            </div>
+            
+            <button class="edit-profile-btn">Editar Perfil</button>
+            <button>sair</button>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="O que você deseja comer?" />
+        <button onclick="searchRestaurant()">Buscar</button>
+    </div>
+
+    <div class="filters">
+        <select id="category" onchange="filterResults()">
+            <option value="">Categorias</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Sushi">Sushi</option>
+            <option value="Hamburguer">Hamburguer</option>
+            <option value="Chinesa">Chinesa</option>
+        </select>
+
+        <select id="price" onchange="filterResults()">
+            <option value="">Faixa de preço</option>
+            <option value="1">R$</option>
+            <option value="2">R$ R$</option>
+            <option value="3">R$ R$ R$</option>
+        </select>
+
+        <select id="rating" onchange="filterResults()">
+            <option value="">Avaliação</option>
+            <option value="4">4+</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <section id="restaurant-list" class="restaurant-list">
+    </section>
+
+    <footer>
+        <h3>Localização do Escritório do iFood</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.6571390767387!2d-46.5682993844524!3d-23.624926771243366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ab8b4c3d299%3A0x6e2f6ad99b08c2de!2sIFood!5e0!3m2!1spt-BR!2sbr!4v1635063855381!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
